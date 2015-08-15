@@ -6,9 +6,10 @@ rvm:
   - rbx-2
 gemfile:
   - gemfiles/ar50.gemfile
-allow_failures:
-  - jruby
-  - rbx-2
+matrix:
+  allow_failures:
+    - rvm: rbx-2
+    - rvm: jruby
 before_install:
   - sudo apt-get update
   - sudo apt-get install libgeos-dev libproj-dev
